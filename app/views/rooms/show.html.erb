@@ -1,19 +1,15 @@
-<h1>
-  <%= @room.name %>
-</h1>
 
-<div class="row">
-  <div class="col-12 col-md-3">
-    <%= render partial: 'rooms' %>
-  </div>
 
   <div class="col">
     <div class="chat" data-channel-subscribe="room" data-room-id="<%= @room.id %>">
+      <h1>
+        <%= @room.name %>
+      </h1>
       <% @room_messages.each do |room_message| %>
         <div class="chat-message-container">
           <div class="row no-gutters">
             <div class="col-auto text-center">
-              <img src="<%= room_message.user.gravatar_url %>" class="avatar" alt="">
+              <img src="<%= room_message.sender.gravatar_url %>" class="avatar" alt="">
             </div>
 
             <div class="col">

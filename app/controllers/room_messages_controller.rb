@@ -1,14 +1,15 @@
 class RoomMessagesController < ApplicationController
-  before_action :load_entities
+  before_action :load_entities, only: [:create]
 
   def create
-
-    @room_message = current_user.room_messages.new(params.require(:room_message).permit(:room_id, :message))
+    @room_message = current_user.sent_messages.new(params.require(:room_message).permit(:room_id, :message))
     if @room_message.save
       RoomChannel.broadcast_to @room, @room_message
     end
 
   end
+
+
 
   protected
 

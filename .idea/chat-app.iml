@@ -132,7 +132,6 @@
         <option value="application_record" />
         <option value="assets" />
         <option value="channel" />
-        <option value="coffee:assets" />
         <option value="controller" />
         <option value="devise" />
         <option value="devise:controllers" />
@@ -167,7 +166,6 @@
         <option value="application_record" />
         <option value="assets" />
         <option value="channel" />
-        <option value="coffee:assets" />
         <option value="controller" />
         <option value="devise" />
         <option value="devise:controllers" />

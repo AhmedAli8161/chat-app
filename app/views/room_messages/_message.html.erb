@@ -1,0 +1,21 @@
+<% if room_message.sender == user  %>
+  <div class="d-flex justify-content-end mb-4">
+    <div class="msg_container_send" data-role="message-text">
+      <%= room_message.message %>
+      <span class="msg_time_send" data-role="message-date"> <% room_message.created_at %></span>
+    </div>
+    <div class="img_cont_msg">
+      <img src=<%= room_message.sender.gravatar_url %>, class="rounded-circle user_img_msg" data-role="user-avatar">
+    </div>
+  </div>
+<% else %>
+  <div class="d-flex justify-content-start mb-4">
+    <div class="img_cont_msg">
+      <img src= <%= room_message.receiver.gravatar_url %>, class="rounded-circle user_img_msg" data-role="user-avatar">
+    </div>
+    <div class="msg_container" data-role="message-text">
+      <%= room_message.message %>
+      <span class="msg_time" data-role="message-date"> <% room_message.created_at %></span>
+    </div>
+  </div>
+<% end %>

@@ -3,7 +3,8 @@ class RoomsController < ApplicationController
   before_action :set_rooms, only: [:index, :show]
 
   def index
-    @rooms = Room.all
+    @rooms = Rooms.all
+    @users=User.all
   end
 
   def new
@@ -24,7 +25,8 @@ class RoomsController < ApplicationController
 
   def show
     @room_message = @room.room_messages.new
-    @room_messages = @room.room_messages.includes(:user)
+    @room_messages = @room.room_messages.includes(:sender)
+    @users=User.all
   end
 
   def edit

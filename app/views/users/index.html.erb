@@ -1,0 +1,14 @@
+<% if @users.present? %>
+  <% @users.each do |user| %>
+    <%= link_to user.name, user_path(user), class: 'nav-link room-nav-link' %>
+  <% end %>
+<% else %>
+  <div class="text-muted">
+    The are no users
+  </div>
+<% end %>
+<!--<div class="mb-3">-->
+  <%#= link_to new_user_registration_path, class: 'btn btn-primary' do %>
+
+  <%# end %>
+<!--</div>-->
