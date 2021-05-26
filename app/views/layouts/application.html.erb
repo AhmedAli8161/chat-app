@@ -7,6 +7,7 @@
 
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
+  <%#= javascript_pack_tag 'hello_vue' %>
 </head>
 
 <body>
@@ -19,7 +20,12 @@
 
           <%= render partial: 'shared/tabs' %>
         </div>
-       <%= yield %>
+        <div class="col">
+          <%= yield %>
+
+        </div>
+
+
       </div>
     </div>
   </div>

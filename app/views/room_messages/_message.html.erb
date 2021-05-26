@@ -11,7 +11,7 @@
 <% else %>
   <div class="d-flex justify-content-start mb-4">
     <div class="img_cont_msg">
-      <img src= <%= room_message.receiver.gravatar_url %>, class="rounded-circle user_img_msg" data-role="user-avatar">
+      <img src= <%= user.gravatar_url %>, class="rounded-circle user_img_msg" data-role="user-avatar">
     </div>
     <div class="msg_container" data-role="message-text">
       <%= room_message.message %>

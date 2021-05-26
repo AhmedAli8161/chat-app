@@ -1,0 +1,3 @@
+class WitMessage< ApplicationRecord
+
+end
